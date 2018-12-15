@@ -165,7 +165,8 @@ class WscMain implements WscCommonsContract
             );
         }
 
-        return stream_context_create();
+        //return stream_context_create();
+        return stream_context_create(['ssl' => [ 'verify_peer' => FALSE ]]);
     }
 
     /**
